@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" style="background-color: greenyellow;">사용자 입력 실습</h1>
+    <hr>
+    <form action="" method="get">
+        <label for="idinput">아이디입력</label>
+        <input type="text" id="idinput"><br>
+        <!-- <label for="pw">패스워드</label> -->
+        <label >패스워드</label>
+        <input type="password" name="" id="pw"><br>
+        <label for="chx">체크박스</label>
+        남자<input type="checkbox" name="" id="">
+        여자<input type="checkbox" name="" id="">
+        <br>
+        <label for="btn1">버튼</label>
+        <input type="button" value="눌러보세요" onclick="document.getElementById('title').style.backgroundColor='yellow'">
+        <label for="email">이메일</label>
+        <input type="email" name="" id="email" required>
+        <label for="rd1">라디오버튼1</label>
+        <input type="radio" name="rd1" id="rd1">
+        <label for="rd1">라디오버튼2</label>
+        <input type="radio" name="rd1" id="rd1">
+        <label for="month">달력표시</label>
+        <input type="month" name="" id="month">
+        <label for="range">범위선택</label>
+        <input type="range" name="" id="range">
+        <label for="time">시간선택</label>
+        <input type="time" name="" id="time">
+        <label for="color">색상선택</label>
+        <input type="color" name="" id="color"><br>
+        <label for="txtarea">장문글쓰기</label>
+        <textarea name="" id="" cols="30" rows="10">장문글쓰기</textarea>
+        <input type="submit" value="제출">
+
+
+
+    </form>
+</body>
+</html>
