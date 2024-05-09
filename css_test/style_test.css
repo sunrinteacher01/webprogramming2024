@@ -1,0 +1,95 @@
+/* 글꼴 설정 */
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+} 
+/* 전체 선택 */
+*{
+    margin: 0; 
+    /* 바깥여백을 0으로 한다 */
+    padding: 0;
+    /* 안쪽여백을 0으로 한다 */
+    box-sizing: border-box;
+    /* 화면 영역의 크기를 제한한다.  */
+
+}
+/* 배경처리 */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(images/room.jpg);
+    
+}
+/* 헤더배치 */
+.container .header{
+
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    /* header 영역의 크기와 여백을 설정 */
+    display: flex;
+    justify-content: space-between;
+    /* 로고와 메뉴영역에 대한 배치를 설정 */
+    }
+/* 글자로고 */
+.container .header h1 a{
+    color: white;
+    font-family: abster;
+    text-decoration: none;
+}
+
+/* 메뉴요소 배치 */
+.container .nav ul li{
+    display: inline-block;
+    /* justify-content: space-between; */
+    margin: 0 10px;
+
+}
+/* 메뉴요소 스타일링 */
+.container .nav ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+
+/* 메뉴요소 마우스이벤트 */
+.container .nav ul li a:hover{
+    color: aquamarine;
+}
+/* 화면 중앙 요소 배치 */
+.container .hero{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/* 화면 중앙 요소 제목 */
+.container .hero h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/* 화면 중앙 요소 본문 */
+.container .hero p{
+    color: yellowgreen
+    
+}
+/* 화면 중앙 요소 버튼 */
+.container .hero button{
+    background: none;
+    border: 2px solid greenyellow;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 30px;
+
+}
+/* 화면 중앙 요소 버튼 처리 */
+.container .hero button:hover{
+    /* background-color: rgba(0,0,0,0.8) */
+
+    background-color: #fff;
+    color: aquamarine;
+}
