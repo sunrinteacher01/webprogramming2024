@@ -1,0 +1,104 @@
+/* 글꼴 설정 */
+@font-face {
+    font-family: abster;
+    src: url(font/abster-webfont.woff) format('woff');
+} 
+/* 전체 선택 */
+*{
+    margin: 0;
+    /* 바깥 여백을 0으로 설정 */
+    padding: 0;
+    /* 안쪽 여백을 0으로 설정 */
+    box-sizing: border-box;
+    /* 여백으로 인해 전체 화면의 크기가 변경되는 것을 방지 */
+}
+/* 기본 여백을 모두 제거하는 설정을 한다 */
+
+/* 배경처리 */
+/* 배경의 크기를 결정하고, 배경의 색상 등을 처리해야한다.  */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url(./images/room.jpg);
+    /* 배경색을 그라데이션 처리, 사진 삽입 */
+}
+/* 헤더배치 */
+/* 로고, 메뉴 두덩어리에 대한 배치, 헤더영역의 크기 결정 */
+.header{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* 글자로고 */
+/* 글자색상을 흰색으로, a태그의 밑줄 제거, 글꼴 변경 */
+.container .header h1 a{
+    color: whitesmoke;
+    /* 글자색상 변경 */
+    text-decoration: none;
+    /* a태그 기본 글자 속성 변경 */
+    font-family: abster;
+
+}
+/* 메뉴요소 배치 */
+/* li 요소는 원래 블록요소였는데 인라인 요소로 변경하여 수평 정렬 처리 */
+.container .header .nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+/* 메뉴요소 스타일링 */
+/* 메뉴요소 글자색 변경, a태그 기본 속성(파란색, 밑줄) 제거 */
+.container .header .nav ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+
+/* 메뉴요소 마우스이벤트 */
+/* hover 가상선택자를 이용해서 마우스를 올렸을때 글자색이 변경되도록 처리 */
+.container .header .nav ul li a:hover{
+    color: aquamarine;
+}
+
+/* 화면 중앙 요소 배치 */
+/* hero영역을 중앙에 배치하기 위해 
+1) 기준점을 부모요소기준으로 바꾸기 위해
+position absolute 속성을 사용함.
+2) 기준점대비 중앙값이 화면 가로크기 및 세로크기 대비 50%, 50%으로 값을 설정함
+3) 기준점을 설정한후 기준점만 화면 정중앙에 배치되므로 
+실제 중앙에 배치할 글자, 버튼을 중앙에 오게 하기 위해 미세조정이 필요함.
+그래서 transform-translate를 이용해서 위치를 미세조정함  */
+
+
+.container .hero{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+}
+/* 화면 중앙 요소 제목 */
+.container .hero h2{
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+/* 화면 중앙 요소 본문 */
+.container .hero p{
+    font-size: larger;
+    margin-bottom: 20px;
+}
+/* 화면 중앙 요소 버튼 */
+.container .hero button{
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(27, 41, 5, 0.7);
+    
+}
+/* 화면 중앙 요소 버튼 처리 */
+.container .hero button:hover{
+    background-color: yellowgreen;
+}
+
